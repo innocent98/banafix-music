@@ -12,12 +12,13 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { useState } from "react";
 import Testimony from "./pages/testimony/Testimony";
 
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Router>
       <Switch>
-        <Route>
+        <Route exact path="/">
           <div className="app">
             <TopContact />
             <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
